@@ -1,0 +1,374 @@
+#game {
+    width: 700px;
+    height: 250px;
+    /* border-bottom: 1px solid #000; */
+    margin:auto;
+    background-color: #e6e4e4;
+    border-radius: 38px;
+    margin-top: 100px;
+    transition: .3s;
+}
+#road {
+    
+    width: 600px;
+    height: 40px;
+    top: -70px;
+    background-image: url(img/road.png);
+    position: relative;
+    z-index: 1;
+    left: 50px;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    
+    
+}
+.roadReverseMov{
+    animation: roadReverseMov 5s infinite linear;
+}
+@keyframes roadReverseMov {
+    100%{
+        background-position-x: 1200px;
+    }
+}
+.roadMov{
+    animation: roadMov 10s infinite linear;
+}
+@keyframes roadMov {
+    
+    100%{
+        background-position: -600px 0;       
+    }
+}
+#clouds{
+    background-image: url(img/cloud.png);
+    left: 0px;
+    width: 700px;
+    height: 50px;
+    z-index: 0;
+    position: relative;
+    visibility:visible;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    background-position-x: 740px;
+   
+}
+.cloudReverseMov{
+    animation: cloudReverseMov 4s infinite linear;
+}
+@keyframes cloudReverseMov {
+    0%{
+        background-position-x: -150px;
+        
+    }
+    100%{
+        background-position-x: 740px;
+        
+    }
+}
+.cloudMov{
+    animation: cloudMov 8s infinite linear;
+}
+
+@keyframes cloudMov {
+    0%{
+        background-position-x: 740px;
+        
+    }
+    100%{
+        background-position-x: -150px;
+        
+    }
+}
+#startBut{
+    width:70px;
+    height: 25px;
+    
+    margin-left: 47%;
+    margin-top: 2%;
+    background-color: #363434;
+    cursor:pointer;
+    border-radius: 38px;
+}
+#points{
+    width:100px;
+    height:55px;
+    margin-left:85%;
+    font-family:'Montagu Slab';
+    position: relative;
+    top: 25px;
+}
+#bird {
+    
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-image: url(img/birdA.png);
+    background-size: 70px 70px;
+    top: 35px;
+    left: 610px;
+    
+    z-index: 2;
+    visibility:hidden;
+    
+}
+/* .birdMov{
+    animation: birdMov 2s infinite linear;
+    
+} */
+.birdAnim{animation: birdAnim 0.4s infinite linear;}
+@keyframes birdAnim{
+    0%{
+        background-image: url(img/birdB.png);
+    }
+    100%{
+        background-image: url(img/birdA.png);
+    }
+}
+/* @keyframes birdMov {
+    0%{
+        left: 560px;
+        
+    }
+
+    100%{
+        left: -10px;
+        
+    }
+    
+} */
+.bulletAnim{ animation: bulletAnim 2s linear}
+@keyframes bulletAnim {
+    0%{left: 550px}
+    100%{left: 45px; }
+}
+#dino { 
+    width: 50px;
+    height: 50px;
+    background-image: url(img/mDino/myDino.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 3px;
+    left: 65px;
+    transition: .3s;
+    
+}
+.dinoFlying{
+    animation: dinoFlying 0.2s infinite linear;
+}
+
+@keyframes dinoFlying {
+    0%{
+        background-image: url(/img/mDino/flyingDino1.png);
+    }
+    100%{
+        background-image: url(/img/mDino/flyingDino2.png);
+    }
+}
+.gopDinoFlying{
+    animation: gopDinoFlying 0.2s infinite linear;
+}
+@keyframes gopDinoFlying {
+    0%{
+        background-image: url(/img/mDino/gopFlyingDino1.png);
+    }
+    100%{
+        background-image: url(/img/mDino/gopFlyingDino2.png);
+    }
+}
+.coloredDinoFlying{
+    animation: coloredDinoFlying 0.2s infinite linear;
+}
+@keyframes coloredDinoFlying {
+    0%{
+        background-image: url(/img/mDino/coloredFlyingDino1.png);
+    }
+    100%{
+        background-image: url(/img/mDino/coloredFlyingDino2.png);
+    }
+}
+.dinoDMov{
+    animation: dinoDMov 0.2s infinite linear;
+}
+.dinoMov{
+    animation: dinoMov 0.2s infinite linear;
+}
+.gopDinoMov{
+    animation: gopDinoMov 0.2s infinite linear;
+}
+.gopDinoDMov{
+    animation: gopDinoDMov 0.2s infinite linear;
+}
+.coloredDinoMov{
+    animation: coloredDinoMov 0.2s infinite linear;
+}
+.coloredDinoDMov{
+    animation: coloredDinoDMov 0.2s infinite linear;
+}
+@keyframes dinoMov {
+    0%{
+        background-image: url(img/mDino/MyDinoL.png);
+    }
+    50%{
+        background-image: url(img/mDino/myDinoR.png)
+    }
+    99%{
+        background-image: url(img/mDino/myDino.png);
+    }
+}
+@keyframes gopDinoMov {
+    0%{
+        background-image: url(img/mDino/gopDinoL.png);
+    }
+    50%{
+        background-image: url(img/mDino/gopDinoR.png)
+    }
+    99%{
+        background-image: url(img/mDino/gopDino.png);
+    }
+}
+@keyframes coloredDinoMov {
+    0%{
+        background-image: url(img/mDino/dinoL.png);
+    }
+    50%{
+        background-image: url(img/mDino/dinoR.png)
+    }
+    99%{
+        background-image: url(img/mDino/dinoColored.png);
+    }
+}
+@keyframes dinoDMov{
+    0%{background-image: url(img/mDino/myDinoDL.png);}
+    
+    100%{background-image: url(img/mDino/myDinoDR.png);}
+}
+@keyframes gopDinoDMov{
+    0%{background-image: url(img/mDino/gopDinoDL.png);}
+    
+    100%{background-image: url(img/mDino/gopDinoDR.png);}
+}
+@keyframes coloredDinoDMov {
+    0%{background-image: url(img/mDino/dinoDL.png);}
+    
+    100%{background-image: url(img/mDino/dinoDR.png);}
+}
+#cactus{
+    width:40px;
+    height:40px;
+    background-image: url(img/cactus.png);
+    background-size: 40px 40px;
+    position: relative;
+    top:-35px;
+    left: 610px;
+    
+}
+/* #cactusCollision{
+    width: 10px;
+    height: 10px;
+    left: 15px;
+    top:15px;
+    background-color: red;
+    position:relative;
+    z-index: 1;
+} */
+.cactusMov{
+    animation: cactusMov 2s infinite linear;
+}
+@keyframes cactusMov{
+    0% {
+        left: 610px;
+    }
+    100%{
+        left: 40px;
+    }
+}
+#ufo{
+    /* display: none; */
+    visibility: hidden;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-image: url(img/ufo1.png);
+    background-size: 70px 70px;
+    
+    top: -215px;
+    left: 65px;
+    /* transition: .3s; */
+}
+.ufoAnim{
+    animation: ufoAnim 0.2s infinite linear;
+}
+@keyframes ufoAnim {
+    0%{
+        background-image: url(img/ufo1.png);
+    }
+    100%{
+        background-image: url(img/ufo2.png);
+    }
+}
+.jump{
+    animation: jump 0.4s linear;
+}
+
+
+@keyframes jump {
+    0%{
+        top:3px;
+    }
+    30%{
+        top:-58px;
+    }
+    45%{
+        top:-63px;
+    }
+    50%{
+        top: -68px;
+    }
+  
+    100%{
+        top: 3px;
+    }
+}
+#modalMenu{
+    display: block;
+    position: relative;
+    top: -275px;
+    left: 280px;
+    width: 150px;
+    height: 75px;
+    background-color: rgba(163, 163, 163, 0.699);
+    border-radius: 12px;
+    z-index: 2;
+    
+}
+#StartButton{
+    cursor: pointer;
+    position: relative;
+    background-image: url(/img/startBut.png);
+    left: 85px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px ;
+    
+    /* background-image: url() ; */
+
+}
+#ShopButton{
+    cursor: pointer;
+    position: relative;
+    background-image: url(/img/shopButNew2.png);
+    left: 40px;
+    top: -23px;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    /* transition: .3s;  */
+}
+#StartButton:hover{
+    transform: scale(1.05);
+    /* background-image: url() ; */
+}
+#ShopButton:hover{
+    transform: scale(1.05);
+}
