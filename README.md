@@ -18,8 +18,12 @@ KeyBinds:
 	F - Shoot.
 
 Minuses:
+
 	Weak hud system - Created without a class.
+
 	Confusing coordinate system - Developed for positioning repair, but doesn't help. All thats system can be replaced with Element.getBoundingClientRect().
+
 	confusion with myObject and Enemies classes - Enemy class replaced by myObject, and that makes it unnecessary.
+
 I described main problems of this project. 
 Thanks for attention.
