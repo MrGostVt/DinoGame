@@ -341,7 +341,7 @@ class game{
                 }
             }
             const playerPositions = this.player.changeXY();
-            if(parseInt(this.points.points.join(''))>=4){ //1000
+            if(parseInt(this.points.points.join(''))>=185){ //1000
                 let otherSide = this.player.getSideInfo();
                 if(this.secondStageStart)
                 { 
