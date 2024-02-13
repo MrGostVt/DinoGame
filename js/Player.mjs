@@ -8,7 +8,7 @@ class Player extends MyObject{
     
     jump(){ 
         //jump function
-        if(this.docObj.classList != "jump"){
+        if(this.docObj.classList !== "jump"){
             this.docObj.classList.add("jump") ;
         }
         setTimeout(() => {
@@ -19,7 +19,7 @@ class Player extends MyObject{
         // sit function
         switch (a){
             case 0: 
-                if(this.docObj.classList != animPack[1]){
+                if(this.docObj.classList !== animPack[1]){
                     this.docObj.classList.remove(animPack[0]);
                     this.docObj.classList.add(animPack[1])   ;      
                     this.sitPos = 1;
