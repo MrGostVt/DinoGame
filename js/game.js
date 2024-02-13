@@ -25,7 +25,7 @@ class game{
             if(backgroundPosX >= 440 && backgroundPosX <= 560){this.changedPosition = 0;}
 
             //Exeption of changing cloud textures more than once.
-            if(backgroundPosX >= -150 && backgroundPosX<=-140 && this.changedPosition == 0 ){ 
+            if(backgroundPosX >= -150 && backgroundPosX<=-140 && this.changedPosition === 0 ){ 
                 this.changedPosition = 1;
                 const rnd = Math.floor(0 + Math.random() * (3 + 1 - 0));
                 this.docObj.style.backgroundImage = settings.cloudUrls[rnd];
@@ -92,15 +92,15 @@ class game{
         this.pointsCycle = setInterval(() => {
             let i = 3;
             this.points.points[i]+=1;
-            if(this.points.points[i] == 9){   
+            if(this.points.points[i] === 9){   
                 this.points.points[i] = 0;
                 this.points.points[i-1]+=1;
                 
-                if(this.points.points[i-1] == 9 && this.points.points[i] == 0){                    
+                if(this.points.points[i-1] === 9 && this.points.points[i] === 0){                    
                     this.points.points[i-1] = 0;
                     this.points.points[i-2] += 1;
                    
-                    if(this.points.points[i-2] == 9 && this.points.points[i-1]  == 0 && this.points.points[i] == 0){   
+                    if(this.points.points[i-2] === 9 && this.points.points[i-1]  === 0 && this.points.points[i] === 0){   
                         this.points.points[i-2] = 0;
                         this.points.points[i-3]+=1;
                     }
@@ -109,7 +109,7 @@ class game{
 
             this.points.point.textContent ="HI "+ this.points.hiPoints.join('') + " " + this.points.points.join('');
 
-            if(this.maxPointsSpeed>=65 && this.points.points[i] == 0 && parseInt(this.points.points.join('')) >= this.points.nextSpeedUpdate ){ //пришвидшення
+            if(this.maxPointsSpeed>=65 && this.points.points[i] === 0 && parseInt(this.points.points.join('')) >= this.points.nextSpeedUpdate ){ 
                 this.maxPointsSpeed-=35;   //speed up by 35 ticks
                 clearInterval(this.pointsCycle); // interval restart
                 this.points.nextSpeedUpdate = parseInt(this.points.nextSpeedUpdate * 0.7 + this.points.nextSpeedUpdate);//calculating next step.
@@ -146,7 +146,7 @@ class game{
         this.points.points = [0,0,0,0];
         this.points.point.textContent ="HI "+ this.points.hiPoints.join('') + " " + this.points.points.join('');
         
-        if(koef == 1){
+        if(koef === 1){
             myBird.bird.classList.remove("birdAnim");
             myBird.bird.style.visibility = "hidden";
             k = 0;
@@ -180,10 +180,10 @@ class game{
     checkCollision(enemyPositions, playerPositions = [0,0], birdStatus = 0, ufoStatus = 0, bullet = 0){  
         const cactusPosX = enemyPositions.cactus[0];
         
-        if ((cactusPosX < playerPositions[0]+25 && cactusPosX > playerPositions[0] && playerPositions[1] >=3) && ufoStatus == 0){
+        if ((cactusPosX < playerPositions[0]+25 && cactusPosX > playerPositions[0] && playerPositions[1] >=3) && ufoStatus === 0){
             return 1;
         }
-        if (birdStatus == 1 && ufoStatus == 0 ){
+        if (birdStatus === 1 && ufoStatus === 0 ){
             const birdX = enemyPositions.bird[0];
             const birdY = enemyPositions.bird[1]; //max 55
             
@@ -193,7 +193,7 @@ class game{
             }            
         }
         //UFO collision check
-        if(ufoStatus !=0){  
+        if(ufoStatus !== 0){  
             //70 - width.
             //TODO: Add function to myObjectClass for window.getComputedStyle/redevelop coordinates system
             const playerHeight = 110;
@@ -205,7 +205,7 @@ class game{
             }
         }
         //Shoot collision.
-        if(ufoStatus != 0 && bullet != 0){
+        if(ufoStatus !== 0 && !bullet){
             if(((enemyPositions.ufo[0]+70 + this.ufo.diffX) >= bullet.getComputedX()) 
             && bullet.getComputedY() + 50 > enemyPositions.ufo[1]+this.ufo.diffY 
             && bullet.getComputedY() + 50  < enemyPositions.ufo[1]+this.ufo.diffY+70){
@@ -245,7 +245,7 @@ class game{
         document.getElementById('modalMenu').style.display = 'block';     
     }
     pauseToSecStage(koef){
-        if(koef == 1)
+        if(koef === 1)
         {
             this.cactus.docObj.classList.remove('cactusMov');
             this.cactus.docObj.style.visibility = 'hidden';
@@ -253,7 +253,7 @@ class game{
             clearInterval(this.pointsCycle);
             return true;
         }
-        if(koef == 0){
+        if(koef === 0){
             this.pause = false;
             this.road.docObj.classList.add('roadReverseMov');
             this.clouds.docObj.classList.add('cloudReverseMov');
@@ -335,7 +335,7 @@ class game{
             `url(img/${this.skinPack[this.skinPackType ][3]}2.png)`,`url(img/${this.skinPack[this.skinPackType][3]}3.png)`],});
             if(this.secondStageStart){
                 enemyPositions.cactus = this.cactus.changeXY();
-                if((parseInt(this.points.points.join(''))>= this.bird.smth.startBirdPoints) && this.secondStageStart){
+                if((parseInt(this.points.points.join('')) >= this.bird.smth.startBirdPoints) && this.secondStageStart){
                     this.birdStatus = this.bird.startObjectFunc(this.bird.changeXY());
                     enemyPositions.bird = this.bird.changeXY();
                 }
@@ -369,7 +369,7 @@ class game{
                 }  
             }
             const end = this.checkCollision(enemyPositions,playerPositions, this.birdStatus, ufoStatus, this.bullet);
-            if(end == 1 && this.cheat != 6){this.endGame();}
+            if(end === 1 && this.cheat !== 6){this.endGame();}
             if(!this.startStop){clearInterval(gameCycle); clearInterval(this.pointsCycle);}
         }, 10)
     }
