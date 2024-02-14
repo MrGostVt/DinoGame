@@ -131,7 +131,7 @@ class game{
                 break;
             case 0:
                 document.getElementById('game').style.backgroundColor = '#e6e4e4';
-                this.player.docObj.style.backgroundImage = 'url(/img/mDino/myDino)';
+                this.player.docObj.style.backgroundImage = 'url(img/mDino/myDino)';
                 break;
             case 2:
                 this.player.docObj.style.backgroundImage = 'url(img/mDino/gopDino.png)';
@@ -151,7 +151,7 @@ class game{
             myBird.bird.style.visibility = "hidden";
             k = 0;
         }
-
+        //TODO: Add bullet check, and removing.
         if(!this.secondStageStart){
             this.player.up(1);
             this.player.down(1);
@@ -428,8 +428,8 @@ function openShop(){
         modalMenu.style.left = '100px';
         startButton.style.visibility = 'hidden';
         firstOpen = false;
-        skinShop.coloredSkinBut = createButton(()=>{gameStart.setSkinPack(1)}, 'url(/img/mDino/dinoColored.png', '#bfc072');
-        skinShop.gopSkinBut = createButton(()=>{gameStart.setSkinPack(2)},'url(/img/mDino/gopDino.png', 'rgb(129, 129, 185)' );
+        skinShop.coloredSkinBut = createButton(()=>{gameStart.setSkinPack(1)}, 'url(img/mDino/dinoColored.png', '#bfc072');
+        skinShop.gopSkinBut = createButton(()=>{gameStart.setSkinPack(2)},'url(img/mDino/gopDino.png', 'rgb(129, 129, 185)' );
         modalMenu.appendChild(skinShop.coloredSkinBut.buttonObj);
         modalMenu.appendChild(skinShop.gopSkinBut.buttonObj);
     }

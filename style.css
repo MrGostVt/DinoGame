@@ -158,10 +158,10 @@
 
 @keyframes dinoFlying {
     0%{
-        background-image: url(/img/mDino/flyingDino1.png);
+        background-image: url(img/mDino/flyingDino1.png);
     }
     100%{
-        background-image: url(/img/mDino/flyingDino2.png);
+        background-image: url(img/mDino/flyingDino2.png);
     }
 }
 .gopDinoFlying{
@@ -169,10 +169,10 @@
 }
 @keyframes gopDinoFlying {
     0%{
-        background-image: url(/img/mDino/gopFlyingDino1.png);
+        background-image: url(img/mDino/gopFlyingDino1.png);
     }
     100%{
-        background-image: url(/img/mDino/gopFlyingDino2.png);
+        background-image: url(img/mDino/gopFlyingDino2.png);
     }
 }
 .coloredDinoFlying{
@@ -180,10 +180,10 @@
 }
 @keyframes coloredDinoFlying {
     0%{
-        background-image: url(/img/mDino/coloredFlyingDino1.png);
+        background-image: url(img/mDino/coloredFlyingDino1.png);
     }
     100%{
-        background-image: url(/img/mDino/coloredFlyingDino2.png);
+        background-image: url(img/mDino/coloredFlyingDino2.png);
     }
 }
 .dinoDMov{
@@ -344,7 +344,7 @@
 #StartButton{
     cursor: pointer;
     position: relative;
-    background-image: url(/img/startBut.png);
+    background-image: url(img/startBut.png);
     left: 85px;
     top: 15px;
     width: 40px;
@@ -357,7 +357,7 @@
 #ShopButton{
     cursor: pointer;
     position: relative;
-    background-image: url(/img/shopButNew2.png);
+    background-image: url(img/shopButNew2.png);
     left: 40px;
     top: -23px;
     width: 40px;
