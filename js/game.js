@@ -1,7 +1,7 @@
 
 import Enemy from "./Enemies.mjs";
 import MyObject from "./MyObject.mjs";
-import Player from "./player.mjs";
+import Player from "./Player.mjs";
 //TODO: Redevelop coordinates system at MyObject class.
 class game{
     constructor(){

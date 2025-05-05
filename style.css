@@ -13,7 +13,7 @@
     width: 600px;
     height: 40px;
     top: -70px;
-    background-image: url(img/road.png);
+    background-image: url(./img/road.png);
     position: relative;
     z-index: 1;
     left: 50px;
@@ -40,7 +40,7 @@
     }
 }
 #clouds{
-    background-image: url(img/cloud.png);
+    background-image: url(./img/cloud.png);
     left: 0px;
     width: 700px;
     height: 50px;
@@ -102,7 +102,7 @@
     position: relative;
     width: 60px;
     height: 60px;
-    background-image: url(img/birdA.png);
+    background-image: url(./img/birdA.png);
     background-size: 70px 70px;
     top: 35px;
     left: 610px;
@@ -118,10 +118,10 @@
 .birdAnim{animation: birdAnim 0.4s infinite linear;}
 @keyframes birdAnim{
     0%{
-        background-image: url(img/birdB.png);
+        background-image: url(./img/birdB.png);
     }
     100%{
-        background-image: url(img/birdA.png);
+        background-image: url(./img/birdA.png);
     }
 }
 /* @keyframes birdMov {
@@ -144,7 +144,7 @@
 #dino { 
     width: 50px;
     height: 50px;
-    background-image: url(img/mDino/myDino.png);
+    background-image: url(./img/mDino/myDino.png);
     background-size: 50px 50px;
     position: relative;
     top: 3px;
@@ -158,10 +158,10 @@
 
 @keyframes dinoFlying {
     0%{
-        background-image: url(img/mDino/flyingDino1.png);
+        background-image: url(./img/mDino/flyingDino1.png);
     }
     100%{
-        background-image: url(img/mDino/flyingDino2.png);
+        background-image: url(./img/mDino/flyingDino2.png);
     }
 }
 .gopDinoFlying{
@@ -169,10 +169,10 @@
 }
 @keyframes gopDinoFlying {
     0%{
-        background-image: url(img/mDino/gopFlyingDino1.png);
+        background-image: url(./img/mDino/gopFlyingDino1.png);
     }
     100%{
-        background-image: url(img/mDino/gopFlyingDino2.png);
+        background-image: url(./img/mDino/gopFlyingDino2.png);
     }
 }
 .coloredDinoFlying{
@@ -180,10 +180,10 @@
 }
 @keyframes coloredDinoFlying {
     0%{
-        background-image: url(img/mDino/coloredFlyingDino1.png);
+        background-image: url(./img/mDino/coloredFlyingDino1.png);
     }
     100%{
-        background-image: url(img/mDino/coloredFlyingDino2.png);
+        background-image: url(./img/mDino/coloredFlyingDino2.png);
     }
 }
 .dinoDMov{
@@ -206,56 +206,56 @@
 }
 @keyframes dinoMov {
     0%{
-        background-image: url(img/mDino/MyDinoL.png);
+        background-image: url(./img/mDino/MyDinoL.png);
     }
     50%{
-        background-image: url(img/mDino/myDinoR.png)
+        background-image: url(./img/mDino/myDinoR.png)
     }
     99%{
-        background-image: url(img/mDino/myDino.png);
+        background-image: url(./img/mDino/myDino.png);
     }
 }
 @keyframes gopDinoMov {
     0%{
-        background-image: url(img/mDino/gopDinoL.png);
+        background-image: url(./img/mDino/gopDinoL.png);
     }
     50%{
-        background-image: url(img/mDino/gopDinoR.png)
+        background-image: url(./img/mDino/gopDinoR.png)
     }
     99%{
-        background-image: url(img/mDino/gopDino.png);
+        background-image: url(./img/mDino/gopDino.png);
     }
 }
 @keyframes coloredDinoMov {
     0%{
-        background-image: url(img/mDino/dinoL.png);
+        background-image: url(./img/mDino/dinoL.png);
     }
     50%{
-        background-image: url(img/mDino/dinoR.png)
+        background-image: url(./img/mDino/dinoR.png)
     }
     99%{
-        background-image: url(img/mDino/dinoColored.png);
+        background-image: url(./img/mDino/dinoColored.png);
     }
 }
 @keyframes dinoDMov{
-    0%{background-image: url(img/mDino/myDinoDL.png);}
+    0%{background-image: url(./img/mDino/myDinoDL.png);}
     
-    100%{background-image: url(img/mDino/myDinoDR.png);}
+    100%{background-image: url(./img/mDino/myDinoDR.png);}
 }
 @keyframes gopDinoDMov{
-    0%{background-image: url(img/mDino/gopDinoDL.png);}
+    0%{background-image: url(./img/mDino/gopDinoDL.png);}
     
-    100%{background-image: url(img/mDino/gopDinoDR.png);}
+    100%{background-image: url(./img/mDino/gopDinoDR.png);}
 }
 @keyframes coloredDinoDMov {
-    0%{background-image: url(img/mDino/dinoDL.png);}
+    0%{background-image: url(./img/mDino/dinoDL.png);}
     
-    100%{background-image: url(img/mDino/dinoDR.png);}
+    100%{background-image: url(./img/mDino/dinoDR.png);}
 }
 #cactus{
     width:40px;
     height:40px;
-    background-image: url(img/cactus.png);
+    background-image: url(./img/cactus.png);
     background-size: 40px 40px;
     position: relative;
     top:-35px;
@@ -288,7 +288,7 @@
     position: relative;
     width: 70px;
     height: 70px;
-    background-image: url(img/ufo1.png);
+    background-image: url(./img/ufo1.png);
     background-size: 70px 70px;
     
     top: -215px;
@@ -300,10 +300,10 @@
 }
 @keyframes ufoAnim {
     0%{
-        background-image: url(img/ufo1.png);
+        background-image: url(./img/ufo1.png);
     }
     100%{
-        background-image: url(img/ufo2.png);
+        background-image: url(./img/ufo2.png);
     }
 }
 .jump{
@@ -344,7 +344,7 @@
 #StartButton{
     cursor: pointer;
     position: relative;
-    background-image: url(img/startBut.png);
+    background-image: url(./img/startBut.png);
     left: 85px;
     top: 15px;
     width: 40px;
@@ -357,7 +357,7 @@
 #ShopButton{
     cursor: pointer;
     position: relative;
-    background-image: url(img/shopButNew2.png);
+    background-image: url(./img/shopButNew2.png);
     left: 40px;
     top: -23px;
     width: 40px;
