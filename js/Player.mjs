@@ -103,7 +103,7 @@ class Player extends MyObject{
                 objectsToStop.cloud.classList.remove('cloudMov');
                 objectsToStop.road.classList.remove('roadMov');
                 objectsToStop.dino.classList.remove(animPack[0]);
-                objectsToStop.dino.style.backgroundImg = 'url(img/mDino/flyingDino)';
+                objectsToStop.dino.style.backgroundImg = 'url(./img/mDino/flyingDino)';
                 objectsToStop.dino.classList.add(animPack[2]);
                 this.docObj.style.width = '70px';
                 this.docObj.style.backgroundSize = '70px 50px';

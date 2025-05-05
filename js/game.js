@@ -7,9 +7,9 @@ class game{
     constructor(){
         this.cooldown = false;
         // 0 -standart, 1 - colored, 2-gop
-        this.skinPack = {0:['dinoMov','dinoDMov', 'dinoFlying','cloud','url(img/mDino/myDino.png)'], 
-        1:['coloredDinoMov','coloredDinoDMov','coloredDinoFlying', 'cloudColored','url(img/mDino/dinoColored.png)'],
-        2:['gopDinoMov', 'gopDinoDMov','gopDinoFlying', 'cloudColored', 'url(img/mDino/gopDino.png'],
+        this.skinPack = {0:['dinoMov','dinoDMov', 'dinoFlying','cloud','url(./img/mDino/myDino.png)'], 
+        1:['coloredDinoMov','coloredDinoDMov','coloredDinoFlying', 'cloudColored','url(./img/mDino/dinoColored.png)'],
+        2:['gopDinoMov', 'gopDinoDMov','gopDinoFlying', 'cloudColored', 'url(./img/mDino/gopDino.png'],
         };
         this.skinPackType = 0;
         this.birdStatus = 0;
@@ -124,19 +124,19 @@ class game{
         switch (skinpack){
             case 1: 
                 document.getElementById('game').style.backgroundColor = 'rgb(231 213 125)';
-                this.player.docObj.style.backgroundImage = 'url(img/mDino/dinoColored.png)';
-                this.cactus.docObj.style.backgroundImage = 'url(img/cactusColored.png)';
-                this.clouds.docObj.style.backgroundImage = 'url(img/cloudColored.png)'
+                this.player.docObj.style.backgroundImage = 'url(./img/mDino/dinoColored.png)';
+                this.cactus.docObj.style.backgroundImage = 'url(./img/cactusColored.png)';
+                this.clouds.docObj.style.backgroundImage = 'url(./img/cloudColored.png)'
                 this.skinPackType = skinpack
                 break;
             case 0:
                 document.getElementById('game').style.backgroundColor = '#e6e4e4';
-                this.player.docObj.style.backgroundImage = 'url(img/mDino/myDino)';
+                this.player.docObj.style.backgroundImage = 'url(./img/mDino/myDino)';
                 break;
             case 2:
-                this.player.docObj.style.backgroundImage = 'url(img/mDino/gopDino.png)';
-                this.cactus.docObj.style.backgroundImage = 'url(img/gopCactus.png)';
-                this.clouds.docObj.style.backgroundImage = 'url(img/cloudColored.png)'
+                this.player.docObj.style.backgroundImage = 'url(./img/mDino/gopDino.png)';
+                this.cactus.docObj.style.backgroundImage = 'url(./img/gopCactus.png)';
+                this.clouds.docObj.style.backgroundImage = 'url(./img/cloudColored.png)'
                 this.skinPackType = skinpack
         }
     }
@@ -331,8 +331,8 @@ class game{
         this.pointsFunc()
         const gameCycle = setInterval(()=>{
             const enemyPositions = {cactus:[0,0], bird:[0,0], ufo:[0,0]}
-            this.clouds.startObjectFunc({cloudUrls:[`url(img/${this.skinPack[this.skinPackType][3]}.png)`,`url(img/${this.skinPack[this.skinPackType ][3]}1.png)`,
-            `url(img/${this.skinPack[this.skinPackType ][3]}2.png)`,`url(img/${this.skinPack[this.skinPackType][3]}3.png)`],});
+            this.clouds.startObjectFunc({cloudUrls:[`url(./img/${this.skinPack[this.skinPackType][3]}.png)`,`url(./img/${this.skinPack[this.skinPackType ][3]}1.png)`,
+            `url(./img/${this.skinPack[this.skinPackType ][3]}2.png)`,`url(./img/${this.skinPack[this.skinPackType][3]}3.png)`],});
             if(this.secondStageStart){
                 enemyPositions.cactus = this.cactus.changeXY();
                 if((parseInt(this.points.points.join('')) >= this.bird.smth.startBirdPoints) && this.secondStageStart){
@@ -428,8 +428,8 @@ function openShop(){
         modalMenu.style.left = '100px';
         startButton.style.visibility = 'hidden';
         firstOpen = false;
-        skinShop.coloredSkinBut = createButton(()=>{gameStart.setSkinPack(1)}, 'url(img/mDino/dinoColored.png', '#bfc072');
-        skinShop.gopSkinBut = createButton(()=>{gameStart.setSkinPack(2)},'url(img/mDino/gopDino.png', 'rgb(129, 129, 185)' );
+        skinShop.coloredSkinBut = createButton(()=>{gameStart.setSkinPack(1)}, 'url(./img/mDino/dinoColored.png', '#bfc072');
+        skinShop.gopSkinBut = createButton(()=>{gameStart.setSkinPack(2)},'url(./img/mDino/gopDino.png', 'rgb(129, 129, 185)' );
         modalMenu.appendChild(skinShop.coloredSkinBut.buttonObj);
         modalMenu.appendChild(skinShop.gopSkinBut.buttonObj);
     }
